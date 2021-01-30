@@ -2,3 +2,16 @@
   text-align: center;
 }
 
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1{
+  margin: 15px;
+}
+
+a{
+  margin: 10px;
+}
