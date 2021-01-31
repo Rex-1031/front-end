@@ -1,3 +1,8 @@
+body {
+  background: #242943;
+  color: white;
+}
+
 .App {
   text-align: center;
 }
@@ -6,7 +11,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+  background: rgba(12, 14, 28, 0.9);
 }
 
 h1{
@@ -15,8 +20,40 @@ h1{
 
 nav{
   margin: 5px;
+  
+  color: white;
 }
 
 a{
-  margin: 10px;
+  margin: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+.button{
+    padding: 10px 25px;
+    border-radius: 12px;
+    border: solid 1px white;
+}
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: solid 1px white;
+}
+
+.bottom-nav{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.btm-link{
+  
+  margin: 10px 50px;
+  text-align: justify;
 }
