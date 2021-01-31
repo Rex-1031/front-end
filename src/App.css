@@ -11,7 +11,9 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 50px;
   background: rgba(12, 14, 28, 0.9);
+  box-shadow: 1px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 h1{
@@ -20,8 +22,8 @@ h1{
 
 nav{
   margin: 5px;
-  
   color: white;
+  
 }
 
 a{

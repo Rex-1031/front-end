@@ -82,6 +82,7 @@ const SectionOne = styled.section`
     height: 25vh;
     background: rgba(12, 14, 28, 0.9);
     border-top: solid 1px white;
+    box-shadow: 1px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 `;
 
 const SectionTwo = styled.section`
@@ -103,6 +104,7 @@ const SectionThree = styled.section`
     background: rgba(12, 14, 28, 0.9);
     border-top: solid 1px white;
     margin: 0;
+    box-shadow: 1px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 `;
 
 const Button = styled(Link)`

@@ -39,9 +39,11 @@ export default Login
 const ContentDiv = styled.div`
     display: flex;
     justify-content: center;
-    margin: 15% 0;
+    margin: 15% auto;
     background: rgba(12, 14, 28, 0.9);
     height: 75vh;
+    width: 90vw;
+    box-shadow: 1px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 `;
 
 const StyledForm = styled.form`
