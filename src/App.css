@@ -6,10 +6,15 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 h1{
   margin: 15px;
+}
+
+nav{
+  margin: 5px;
 }
 
 a{
