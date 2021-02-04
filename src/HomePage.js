@@ -110,7 +110,7 @@ const SectionThree = styled.section`
 const Button = styled(Link)`
     padding: 10px 25px;
     border-radius: 12px;
-    background: #242943;
+    background: #7b6f9f;
     border: solid 1px white;
     margin: 20px;
 `;

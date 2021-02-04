@@ -1,8 +1,47 @@
-import React from 'react';
-import styled from 'styled-components'
+import React, { useState } from 'react';
+import axios from 'axios';
+import styled from 'styled-components';
 
 
 function SignUp(){
+
+    const initalSignUp ={
+        accountType: '',
+        name: '',
+        userName: '',
+        email: '',
+        password: '',
+        instrutorCode: '',
+    }
+
+    const [signUp, setSignUp] = useState(initalSignUp);
+    const [post,setPost] = useState([]);
+    const [severError, setServerError] = useState("");
+
+    const inputChange = (e)=>{
+        const newSignUpData ={
+            ...signUp, 
+            [e.target.name]: e.target.value
+        }
+        setSignUp(newSignUpData)
+    }
+
+    const formSubmit = (e) => {
+        e.preventDefault();
+        console.log('Submitted!')
+
+        axios
+        .post ("https://reqres.in/api/users", signUp)
+        .then((res) =>{
+            setPost(res.data)
+            setSignUp(initalSignUp);
+            setServerError(null);
+
+        })
+        .catch((err) =>{
+            setServerError("Server Error")
+        })
+    }
     return(
         <ContentDiv>
             <InstructionDiv>
@@ -20,36 +59,79 @@ function SignUp(){
 
         
             
-            <StyledForm>
-                <Label>Account Type</Label>
-                <Select>
-                    <option>Choose One</option>
-                    <option>Instructor</option>
-                    <option>Client</option>
+            <StyledForm onSubmit={formSubmit}>
+                <Label htmlFor='accountType'>Account Type</Label>
+                <Select 
+                    name='accountType' 
+                    data-cy='formType' 
+                    value={signUp.formType} 
+                    onChange={inputChange}>
+
+                    <option value=''>Choose One</option>
+                    <option value='instructor'>Instructor</option>
+                    <option value='client'>Client</option>
+
                 </Select>
 
-                <Label>Name</Label>
-                <Input type='text' placeholder='Enter your full name' />
+                <Label htmlFor='name'>Name</Label>
+                <Input 
+                    name ='name' 
+                    type='text' 
+                    data-cy='name' 
+                    value={signUp.name} 
+                    onChange={inputChange} 
+                    placeholder='Enter your full name'
+                />
 
-                <Label>Username</Label>
-                <Input type='text' placeholder='Create a username' />
+                <Label htmlFor='userName'>Username</Label>
+                <Input
+                    name='userName'
+                    type='text'
+                    data-cy='userName'
+                    value={signUp.userName}
+                    onChange={inputChange}
+                    placeholder='Create a username' 
+                />
 
-                <Label>Email</Label>
-                <Input type='email' placeholder='Enter your email' />
+                <Label htmlFor='email'>Email</Label>
+                <Input 
+                    type='email'
+                    name='email'
+                    data-cy='userName'
+                    value={signUp.email}
+                    onChange={inputChange}
+                    placeholder='Enter your email' 
+                />
                 
 
-                <Label>Password</Label>
-                <Input type='password' placeholder='Create a Password' />
+                <Label htmlFor='password'>Password</Label>
+                <Input 
+                    type='password'
+                    name='password'
+                    data-cy='password'
+                    value={signUp.password}
+                    onChange={inputChange}
+                    placeholder='Create a Password' 
+                />
 
-                <Label>Instructor Code</Label>
-                <Input type='password' placeholder='Create an Instructor Code'/>
+                <Label htmlFor='instructorCode'>Instructor Code</Label>
+                <Input
+                    name='instructorCode'
+                    type='password'
+                    data-cy='instructorCode'
+                    value={signUp.instructorCode}
+                    onChange={inputChange}
+                    placeholder='Create an Instructor Code'
+                />
 
                 <ButtonDiv>
                     <Button>Submit</Button>
                 </ButtonDiv>
+
+                <pre>{JSON.stringify(post,null,2)}</pre>    
+
             </StyledForm>
         </ContentDiv>
-       
     )
 }
 
@@ -114,7 +196,7 @@ const Button = styled.button`
     color: white;
     border: solid 2px white;
     font-size: 1.2rem;
-    background: rgba(12, 14, 28, 0.9);
+    background: #7b6f9f;
 `;
 
 const List = styled.ol`

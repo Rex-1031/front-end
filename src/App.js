@@ -5,7 +5,8 @@ import HomePage from './HomePage';
 import Login from './component/Login';
 import SignUp from './component/SignUp';
 import Classes from './component/Classes';
-import Instructors from './component/Instructors'
+import Instructors from './component/Instructors';
+import ClassForm from './component/ClassForm'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/signup' component={SignUp} />
         <Route path ='/classes' component={Classes} />
         <Route path='/instructors' component={Instructors} />
+        <Route path='/classForm' component={ClassForm} />
       </Switch>
       <footer>
         
@@ -39,8 +41,8 @@ function App() {
           </div>
           <nav className='bottom-nav'>
             <Link to='/' className='btm-link'>Home</Link>
-            <Link className='btm-link'>Instructors</Link>
-            <Link className='btm-link'>Classes</Link>
+            <Link to='/instructors' className='btm-link'>Instructors</Link>
+            <Link to='/classes' className='btm-link'>Classes</Link>
           </nav>
         
       </footer>

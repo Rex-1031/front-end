@@ -9,7 +9,7 @@ import styled from 'styled-components';
                 <ContainerDiv>
                     <ClassHeader>
                     <h2>Class Name</h2>
-                    <img alt='Image for Class'/>
+                    
                     </ClassHeader>
                     
                 <ClassInfo>
@@ -31,10 +31,13 @@ import styled from 'styled-components';
 export default ClassCard 
 
 const ContainerDiv = styled.div`
-    border solid 2px black;
+    border solid 2px #f6f4f0;
     padding: 10px;
     width: 20%;
-    color: black;
+    color: #f6f4f0;
+    background-color: #7b6f9f;
+    border-radius: 8px;
+    
 `;
 
 const ClassHeader = styled.div`
