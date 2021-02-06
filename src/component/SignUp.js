@@ -142,7 +142,7 @@ const ContentDiv = styled.div`
     display: flex;
     justify-content: center;
     margin: 20% auto;
-    height: 75vh;
+    height: 90vh;
     width: 90vw;
     background: rgba(12, 14, 28, 0.9); 
     box-shadow: 1px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);

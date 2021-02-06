@@ -90,8 +90,9 @@ export default ClassForm
 const StyledForm = styled.form`
     display: flex;
     flex-direction: column;
-    width: 25vh;
+    width: 50vh;
     margin 20px auto;
+    text-align: left;
 
 `;
 

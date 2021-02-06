@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 
 
@@ -23,7 +24,7 @@ function Login(){
 
                 <label htmlFor='password'/>
                 <StyledInput name='password' type='password' placeholder='Password' />
-                <Button>Login</Button>
+                <Button to={'/User'}>Login</Button>
             </StyledForm>
 
             <MessageDiv>
@@ -84,7 +85,7 @@ const StyledSelect = styled.select`
     
 `;
 
-const Button = styled.button`
+const Button = styled(Link)`
     padding: 15px 50px;
     border-radius: 12px;
     border: solid 2px white;

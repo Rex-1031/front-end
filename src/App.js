@@ -5,7 +5,7 @@ import HomePage from './HomePage';
 import Login from './component/Login';
 import SignUp from './component/SignUp';
 import Classes from './component/Classes';
-import Instructors from './component/Instructors';
+import User from './component/User';
 import ClassForm from './component/ClassForm'
 
 function App() {
@@ -16,7 +16,6 @@ function App() {
         <nav>
           <Link to='/'>Home</Link>
           <Link to='/classes'>Classes</Link>
-          <Link to='/instructors'>Instructors</Link>
           <Link to='/login' className='button'>Login</Link>
           <Link to ='/signup' className='button'>Sign Up</Link>
         </nav>
@@ -26,7 +25,7 @@ function App() {
         <Route path ='/login' component={Login} />
         <Route path='/signup' component={SignUp} />
         <Route path ='/classes' component={Classes} />
-        <Route path='/instructors' component={Instructors} />
+        <Route path='/user' component={User} />
         <Route path='/classForm' component={ClassForm} />
       </Switch>
       <footer>
