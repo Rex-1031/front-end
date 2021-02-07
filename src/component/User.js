@@ -7,20 +7,19 @@ function User(){
 
 
     return(
-    <MainContent>
-            <div>
-                <UserSection>
-					<div>
-                        <GreetingSection>
-						<h2>Welcome User</h2>
-                        <DateTime></DateTime>
-                        </GreetingSection>
-						<p>
-                            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.
-                        </p>
-					</div>
-				</UserSection>
-			</div>
+        <MainContent>
+
+            <GreetingSection>
+	            <h2>Welcome User</h2>
+                <DateTime></DateTime>
+            </GreetingSection>
+            <UserContent>
+                <h2>Classes</h2>
+                <h4>Signed Up</h4>
+                <h4>Recently Viewed</h4>
+            </UserContent>
+
+        
         </MainContent>
     )
 }
@@ -37,13 +36,8 @@ const MainContent = styled.div`
 
 `;
 
-const UserSection =styled.section`
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 25px;
-    height: 25vh;
-    border-top: solid 1px white;
+const UserContent =styled.div`
+    padding: 30px;
 
 `;
 
@@ -51,5 +45,9 @@ const GreetingSection = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding 0 20px;
+    margin: 0 10px;
+    border-bottom: solid 2px white;
+
 `;
 

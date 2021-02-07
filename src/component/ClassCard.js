@@ -3,23 +3,28 @@ import styled from 'styled-components';
 
 
 
-    function ClassCard(){
+    function ClassCard(props){
+        
+
+
+        
         return(
             <div>
-                <ContainerDiv>
+                <ContainerDiv key={props.id}>
                     <ClassHeader>
-                    <h2>Class Name</h2>
-                    
+                        <h2> {props.name}</h2>
                     </ClassHeader>
                     
                 <ClassInfo>
-                    <h4>Instructor Name</h4> {/*this will link to the instructors bio */}
-                    <p>Type of Class</p>
-                    <p>Duration</p>
-                    <p>Intensity</p>
-                    <p>Location</p>
-                    <p>Max Class Size</p>
-                    <p>Members registered for class</p>
+                    <h4> {props.instructor}</h4> {/*this will link to the instructors bio */}
+                    <p> {props.type} </p>
+                    <p>{props.startTime} </p>
+                    <p>{props.duration} </p>
+                    <p> {props.intensityLevel} </p>
+                    <p> {props.location} </p>
+                    <p> {props.maxClassSize} </p>
+                    <p> {props.currentAttnNum} </p>
+                    <p> {props.instructorComments} </p>
                 </ClassInfo>
                     <CardButton>Sign Up For Class</CardButton>
                 </ContainerDiv>

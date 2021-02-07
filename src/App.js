@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route,Switch,Link } from 'react-router-dom';
 import './App.css';
 import HomePage from './HomePage';
@@ -6,9 +6,15 @@ import Login from './component/Login';
 import SignUp from './component/SignUp';
 import Classes from './component/Classes';
 import User from './component/User';
-import ClassForm from './component/ClassForm'
+import ClassForm from './component/ClassForm';
+import ClassCard from './component/ClassCard'
+import data from './data';
+
 
 function App() {
+
+  const [classes, setClasses] = useState(data);
+
   return (
     <div className="App">
       <header>
@@ -16,6 +22,7 @@ function App() {
         <nav>
           <Link to='/'>Home</Link>
           <Link to='/classes'>Classes</Link>
+          <Link to='/user'>Account</Link>
           <Link to='/login' className='button'>Login</Link>
           <Link to ='/signup' className='button'>Sign Up</Link>
         </nav>
@@ -24,7 +31,10 @@ function App() {
         <Route exact path='/' component={HomePage} />
         <Route path ='/login' component={Login} />
         <Route path='/signup' component={SignUp} />
-        <Route path ='/classes' component={Classes} />
+        <Route path ='/classes/:id'>
+          <ClassCard  sessions ={classes}/>
+        </Route>
+        <Route path='/classes' render ={()=><Classes sessions={classes}/>} />
         <Route path='/user' component={User} />
         <Route path='/classForm' component={ClassForm} />
       </Switch>

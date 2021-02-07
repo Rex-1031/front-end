@@ -1,5 +1,7 @@
-export default [
-    {
+
+/*
+    data format:
+
         name: '',
         classImage: '',
         instructor: '',
@@ -11,10 +13,16 @@ export default [
         currentAttnNum: '',
         maxClassSize: '',
         instructorComments: ''
-    },
+*/
+
+
+
+
+export default [
+
     {
         name: 'Dog Run Through the Park',
-        classImage:'',
+        id: 0,
         instructor: 'Gwen Jones',
         type: 'Cardio',
         startTime: 'March 3rd, 9 a.m.',
@@ -27,7 +35,7 @@ export default [
     },
     {
         name: 'Playground Workout For Beginners',
-        classImage: '',
+        id: 1,
         instructor: 'Ben Ellis',
         type: 'calisthenics',
         startTime: 'May 1, 8 a.m.',
@@ -40,7 +48,7 @@ export default [
     },
     {
         name: 'Advanced Yoga Poses',
-        classImage: '',
+        id: 2,
         instructor: 'Gale Jones',
         type: 'Yoga',
         startTime: 'March 23, 5 p.m.',
